@@ -1,0 +1,23 @@
+1.Object casting
+Objct obj = new Object();
+Circle c = obj; //Error
+Circle c = (Circle) obj; //down-casting
+
+2.Object casting
+instanceof Circle
+
+3.Abstract classes
+interface: common behavior between unrelated classes
+abstract
+
+abstract class: can not be instantiated
+concrete class: can be instantiated
+
+A sun class can be abstract even if the super class is not.
+can not use multimorphism in abstract class, since the abstract class can not hold reference.
+
+4.interface
+A class implement an interface
+
+Comparable
+public interface Comparable<E> {}

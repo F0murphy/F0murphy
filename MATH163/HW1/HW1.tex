@@ -1,0 +1,43 @@
+\documentclass{article}
+% Formatting-this makes it a full page
+\usepackage[margin=1in]{geometry}
+%This allows you to use most math symbols
+\usepackage{amsmath,amsfonts,amssymb,mathtools}
+
+%This package, and the following lines, allow you to define lemmas, corollaries, theorems, and examples.  
+\usepackage{amsthm}
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}[theorem]
+\newtheorem{lemma}{Lemma}[theorem]
+\newtheorem{proposition}{Proposition}[theorem]
+\newtheorem{example}{Example}[theorem]
+
+\title{Math 163: Homework 1}
+\author{Fangzheng Yu}
+\date{\today}
+\begin{document}
+%Makes the title show up!
+
+	\maketitle
+\begin{theorem}\label{thm:theTheoremIndeed}
+        The sum of two odd integers is an even integer.
+\end{theorem}
+        \begin{proof}
+                Let $x$ and $y$ be odd integers\\
+                Then there is an integer \(a\), such that
+                $x = 2a + 1$\\
+                Then there is an integer \(b\), such that
+                $y = 2b + 1$\\
+                Then,
+                \[x + y = (2a + 1) + (2b + 1)\]
+                By commutativity:
+                \[x + y = 2a + 2b + 2\]
+                By distributive law:
+                \[x + y = 2(a + b + 1)\]
+                Because
+                $a, b, 1 \in \mathbb{Z}$\\
+                Therefore
+                $a + b + 1 \in \mathbb{Z}$ (by closure under addition of the integers)\\
+                Thus, $x + y$ is an even integer by definition of even.
+        \end{proof}
+\end{document}

@@ -1,0 +1,35 @@
+Cathch-Declare rule: A mothod does not handle the exception, just throw it.
+Catch rule: A method has try and catch for exception.
+
+Class File:
+wrapper class for files.
+
+The order:
+Open the file for reading and writing
+Reading or writing
+Close the file
+
+Open file for reading
+1. Create a Scanner
+2. Constructor Scanner(File) throws a checked FileNotFoundException
+
+Open Files for writing
+1. Create a PrintWriter
+2.PrintWriter(File) also throws a checked FileNotFoundException
+
+File file = new File("output.txt");
+PrintWriter fileWriter = new PrintWriter(file)
+
+Close the Scannner and PrintWriter(good practice)
+fileScanner.close();
+fileWriter.close();
+
+
+
+
+
+
+
+
+
+

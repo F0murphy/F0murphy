@@ -1,0 +1,43 @@
+The method of integer
+The method of String
+Regular Expressions:
+“\\d{3}-\\d{2}-\\d{4}” (good for text check)
+\d single digit
+The use of RE:
+For String: 
+//replaceAll()
+SomeOF String.replaceAll("[+-*/]", "%");
+
+//split()
+String items = "02/25/2021".split("/");
+//return items = {"02", "25", "2021"};
+
+//matches
+"2+3-5".matches("\\d[+-]\\d[+-]\\d");
+//return true
+
+The class of Stringbuilder
+
+Catch and try
+
+Catch is more like a method, and the only parameter is throwable
+The unchecked exception is always the RunTimeException
+
+Anonymous object
+//named object
+Student s = new student();
+processStudent(s);
+
+//Anonymous object
+processStudent(new Student());
+
+
+
+
+
+
+
+
+
+
+
