@@ -1,0 +1,71 @@
+\documentclass{article}
+% Formatting-this makes it a full page
+\usepackage[margin=1in]{geometry}
+%This allows you to use most math symbols
+\usepackage{amsmath,amsfonts,amssymb,mathtools}
+
+%This package, and the following lines, allow you to define lemmas, corollaries, theorems, and examples.  
+\usepackage{amsthm}
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}[theorem]
+\newtheorem{lemma}{Lemma}[theorem]
+\newtheorem{proposition}{Proposition}[theorem]
+\newtheorem{example}{Example}[theorem]
+
+\title{Math 263: Homework 2}
+\author{Fangzheng Yu}
+\date{\today}
+\begin{document}
+    \maketitle
+    \begin{enumerate}
+        \item
+        The number of ways are: \[\binom{10}{2} \binom{8}{3} - \binom{8}{3} - \binom{8}{2} \binom{6}{1} - \binom{8}{2} \binom{6}{3} = 1736\]
+        \item 
+        \begin{enumerate}
+            \item[]
+            Let 1 be the head, and 0 be the tail, and $S$ be the sample space.
+            \item 
+            The sample space is: \[\bigcup\limits_{j = 1} ^ {4}\{(S_1,\ldots, S_j): S_i \in {1, 0}\}\]
+            \item 
+            The size of the sample space is: \[\sum_{i = 1} ^ {4} 2 ^ n = 2 + 4 + 8 + 16 = 30\]
+            \item 
+            Let the event set be $E$, so the event: \[E = \{(1, 1, 1, 0), (1, 1, 0, 1), (1, 0, 1, 1), (0, 1, 1, 1), (1, 1, 1)\}\]
+            \item 
+            Recall: Any subset E of the sample space is known as an event.
+            The number of this events is $2 ^ {30}$.
+        \end{enumerate}
+        \item 
+        \begin{enumerate}
+            \item 
+            Let $S_a$ be the events: \[S_a = \{x: x \in [2, 11]\}\]
+            \item 
+            Let $S_b$ be the events, so $S_b = A \cup B ^ {c}$ \[S_b = \{x: x \in [2, 5]\}\]
+            \item 
+            Let $S_c$ be the events, so $S_c = (A \cup B \cup C) ^ {c}$ \[S_c = \{x: x \in [0, 2) \cup (11, +\infty]\}\]
+        \end{enumerate}
+        \item 
+        \begin{enumerate}
+            \item[]
+            Let the group of sophomores taking math be $A$, and the group of sophomores taking physics be $B$.
+            \item 
+            The largest possibility can be: $A \cup B = \varnothing$, so it can be $50\% + 35\% = 85\%.$\\
+            The smallest possibility can be: $A \supset B$, so it can be $50\%$.
+            \item 
+            $A \cup B = A + B - A \cap B$, so $A \cap B = 35\% + 50\% - 60\% = 25\%$.\\
+            Thus, the percentage of sophomores taking both a math and a physics course is $25\%$.
+        \end{enumerate}
+        \item 
+        \begin{enumerate}
+            \item[]
+            Let the numbers of the total events be $S$, Then $S = \binom{20}{4} = 4845$
+            \item 
+            Let the number of this events be $S_{r \geqslant 3}$.\\
+            Then, $S_{r \geqslant 3} = \binom{8}{3} \binom{12}{1} + \binom{8}{4} = 742$\\
+            Thus, the probability $= \frac{S_{r \geqslant 3}}{S} = \frac{742}{4845}$
+            \item
+            Let the number of this event be $S_{4}$.\\
+            Then, $S_{4} = \binom{5}{4} + \binom{7}{4} + \binom{8}{4} = 110$\\
+            Thus, the probability $= \frac{S_{4}}{S} = \frac{22}{969}$.
+        \end{enumerate}
+    \end{enumerate}
+\end{document}

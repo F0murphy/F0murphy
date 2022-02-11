@@ -56,7 +56,7 @@
         \end{enumerate}
         %question4
         \item The number of ways is: 
-            \[\binom{2}{1} \binom{4}{7} = 70\]
+            \[\binom{4}{8} - \binom{6}{2} = 70 - 15 = 55\]
         %question5
         \item 
         \begin{enumerate}
@@ -68,6 +68,7 @@
             \[\binom{6}{3} - \binom{3}{1} \binom{3}{1}\ = 20 - 9 = 11\]
             %question5_c
             \item 
+            \begin{proof}[proof1]
                 Imagaine that we have a $n$ x $n$ grid.\\
                 And the left in the equation is the number of the distinct shortest ways that a point moves from A to B.\\
                 And the right is the number of the distinct shortest ways that a point moves from A to B and pass through C.
@@ -75,7 +76,6 @@
                 so C can be all the point on the grid's diagonal. (As shown in the figure~\ref{fig:Drawing})
                 And it is clear that if the point moves from A to B, it must pass some of the point on the grid's diagonal. Thus, the right equals left.
                 \textbf{\textit{i.e.}} $\sum_{i = 0}^n \binom{n}{i} \binom{n}{n - i} = \binom{2n}{n}$.
-                \begin{proof}[proof1]
                     \begin{figure}
                         \includegraphics[width=2in]{Drawing}
                         \centering

@@ -1,0 +1,4 @@
+1. Implementing multiple interfaces
+	one class can extend multiple interfaces
+
+

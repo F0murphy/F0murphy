@@ -21,3 +21,23 @@ A class implement an interface
 
 Comparable
 public interface Comparable<E> {}
+
+Cloneable
+shallow copy 
+Object obj1 = obj2;
+The same address
+code:
+public Object clone(){
+	return this
+}
+
+deep copy
+Object obj1 = (Object) obj2.clone();
+The differencet address
+
+
+
+
+
+
+

@@ -1,0 +1,296 @@
+\documentclass{article}
+% Formatting-this makes it a full page
+\usepackage[margin=1in]{geometry}
+%This allows you to use most math symbols
+\usepackage{amsmath,amsfonts,amssymb,mathtools}
+
+%This package, and the following lines, allow you to define lemmas, corollaries, theorems, and examples.  
+\usepackage{amsthm}
+\newtheorem*{theorem*}{Theorem}
+\newtheorem{theorem}{Theorem}
+
+\title{Math 163: Homework 2}
+\author{Fangzheng Yu}
+\date{\today}
+\begin{document}
+%Makes the title show up!
+
+	\maketitle
+
+    \begin{enumerate}
+        \item 
+        \begin{enumerate}
+            \item 
+            \begin{theorem*}
+                The product of an even number and an integer is an even number.
+            \end{theorem*}
+            \begin{proof}
+                Let $x$ be an even integer and $y$ be an integer.\\
+                Then by definition of even, there is an integer $a$ such that $x = 2a$.\\
+                Then,
+                \[xy = (2a)(y)\]
+                \[xy = 2a \cdot y\]
+                By commutative property:
+                \[xy = 2 \cdot ay\]
+                By associative property:
+                \[xy = 2(ay)\]
+                By closure under production of the integers, since $a$ and $y$ are integers, $ay$ is also an integer.\\
+                Thus, by definition of even, this theorem is true.
+            \end{proof}
+            \item 
+            \begin{theorem*}
+                The product of two odd numbers is odd.
+            \end{theorem*}
+            \begin{proof}
+                Let $x$ and $y$ be odd integers\\
+                Then by definition of odd, there is an integer $a$ such that $x = 2a + 1$,
+                and there is an integer $b$ such that $y = 2b + 1$.
+                Then,
+                \[xy = (2a + 1)(2b + 1)\]
+                By distributive property:
+                \[xy = 2a(2b + 1) + (2b + 1)\]
+                By distributive property:
+                \[xy = 2a \cdot 2b + 2a + (2b + 1)\]
+                By commutative property:
+                \[xy = 2 \cdot 2 ab + 2a + 2b + 1\]
+                By distributive property:
+                \[xy = 2(2ab + a + b) + 1\]
+                By closure under multiplication of the integers, since $a$, $b$ and $2$ are integers, $2ab$ is also an integer.\\
+                By closure under addition of the integers, since $a$, $b$, and $2ab$ are integers, $2ab + a + b$ is also an integer.\\
+                Thus, by definition of odd, $xy = 2(2ab + a + b) + 1$ is an odd.
+            \end{proof}
+        \end{enumerate}
+
+        \item 
+        \begin{theorem*}
+            If $a|b$ and $a|c$, then $a|(2b + 3c)$.
+        \end{theorem*}
+        \begin{proof}
+            Let $a$, $b$, and $c$ be integers. Let $a$ divides $b$ and $a$ divides $c$.\\
+            By definition of divides, there exists integers $k_1$ and $k_2$ such that $b = k_1a$ and $c = k_2a$.\\
+            Thus,
+            \[2b + 3c = 2(ak_1) + 3(ak_2)\]
+            By associative property:
+            \[2b + 3c = a(2k_1) + a(3k_2)\]
+            By distributive property:
+            \[2b + 3c = a(2k_1 + 3k_2)\]
+            By closure under multiplication and addition of the integer, since $k_1$, $k_2$ are integers, $(2k_1 + 3k_2)$ is an integer.\\
+            Thus, by definition of divides, $a$ divides $(2b + 3c)$.
+        \end{proof}
+
+        \item 
+        \begin{enumerate}
+            \item 
+            \begin{theorem*}
+                If $a$, $b$ are integers, then $(ab) ^ 2 = a ^ 2 b ^ 2$.
+            \end{theorem*}
+            \begin{proof}
+                Let $a$ and $b$ be integers.\\
+                Then,\\
+                By the definition of ``square'':
+                \[(ab) ^ 2 = (ab)(ab)\]
+                By associative property:
+                \[(ab) ^ 2 = a(ba)b\]
+                By commutative property:
+                \[(ab) ^ 2 = a(ab)b\]
+                By associative property:
+                \[(ab) ^ 2 = (aa)(bb)\]
+                Thus, by the definition of ``square'':
+                \[(ab) ^ 2 = a ^ 2 b ^ 2\]
+
+            \end{proof}
+            \item
+            \begin{theorem*}
+                The expansion of $(a + b) ^ 2$ is $a ^ 2 + 2ab + b ^ 2$.
+            \end{theorem*}
+            \begin{proof}
+
+                Let $a$ and $b$ be integers.\\
+                Then,\\
+                By the definition of ``square'':
+                \[(a + b) ^ 2 = (a + b)(a + b)\]
+                By distributive property:
+                \[(a + b) ^ 2 = a(a + b) + b(a + b)\]
+                By distributive property:
+                \[(a + b) ^ 2 = aa + ab + ba + bb\]
+                By commutative property:
+                \[(a + b) ^ 2 = aa + ab + ab + bb\]
+                By the definition of ``square'':
+                \[(a + b) ^ 2 = a ^ 2 + ab + ab + b^2\]
+                Thus, 
+                \[(a + b) ^ 2 = a ^ 2 + 2ab + b^2\]
+            \end{proof}
+            \item 
+            \begin{theorem}\label{thm:thm1}
+                The expansion of $(ab) ^ 2$ is $abab$.
+            \end{theorem}
+            \begin{proof}
+                By the definition of ``square'':
+                \[(ab) ^ 2 = (ab)(ab)\]
+                \[(ab) ^ 2 = abab\]
+                Because there is no commutative law for multiplication, this is done in this step.\\
+            \end{proof}
+            \begin{theorem}\label{thm:thm2}
+                The expansion of $(a + b) ^ 2$ is $a ^ 2 + b ^ 2 + ab + ba$.
+            \end{theorem}
+            \begin{proof}
+                By the definition of ``square'':
+                \[(a + b) ^ 2 = (a + b)(a + b)\]
+                By the right distributive law:
+                \[(a + b) ^ 2 = a(a + b) + b (a + b)\]
+                By the left distributive law:
+                \[(a + b) ^ 2 = aa + ab + ba + bb\]
+                By the definition of ``square'':
+                \[(a + b) ^ 2 = a ^ 2 + ab + ba + b ^ 2\]
+                By the commutativity of addition:
+                \[(a + b) ^ 2 = a ^ 2 + b ^ 2 + ab + ba\]
+                Because there is no commutative law for multiplication, this is done in this step.            
+            \end{proof}
+            The reason why the alien's number system has two distributive laws rather than one is that there is no commutative laws for multiplication.
+            For example, $ab \neq ba$. this two number are totally different numbers, and if this system has just one distributive laws, they may can not figure out the expansion of $(a + b) ^ 2$.
+        \end{enumerate}
+
+        \item 
+        \begin{enumerate}
+            \item 
+            This two expressions are not logically equivalent.
+            \begin{proof}
+                \begin{tabular}{c|c|c} $P$ $Q$ $R$ & $(P \Rightarrow Q) \Rightarrow R$ & $P \Rightarrow (Q \Rightarrow R)$\\\hline
+                    $T$ $T$ $T$ & $T$ & $T$\\
+                    $T$ $T$ $F$ & $F$ & $F$\\
+                    $T$ $F$ $T$ & $T$ & $T$\\
+                    $T$ $F$ $F$ & $T$ & $T$\\
+                    $F$ $T$ $T$ & $T$ & $T$\\
+                    $F$ $T$ $F$ & $F$ & $T$\\
+                    $F$ $F$ $T$ & $T$ & $T$\\
+                    $F$ $F$ $F$ & $F$ & $T$\\
+                \end{tabular}
+
+                So from this truth table, we can conclude that these two expressions are not logically equivalent.
+            \end{proof}
+            \item 
+            This two expressions are not logically equivalent.
+            \begin{proof}
+                \begin{tabular}{c|c|c} $P$ $Q$ $R$ & $(P \vee Q) \Rightarrow R$ & $(P \Rightarrow R) \vee (Q \Rightarrow R)$\\\hline
+                    $T$ $T$ $T$ & $T$ & $T$\\
+                    $T$ $T$ $F$ & $F$ & $F$\\
+                    $T$ $F$ $T$ & $T$ & $T$\\
+                    $T$ $F$ $F$ & $F$ & $T$\\
+                    $F$ $T$ $T$ & $T$ & $T$\\
+                    $F$ $T$ $F$ & $F$ & $T$\\
+                    $F$ $F$ $T$ & $T$ & $T$\\
+                    $F$ $F$ $F$ & $T$ & $T$\\
+                \end{tabular}
+
+                So from this truth table, we can conclude that these two expressions are not logically equivalent.
+            \end{proof}
+            \item 
+            This two expressions are not logically equivalent.
+            \begin{proof}
+                \begin{tabular}{c|c|c} $P$ $Q$ $R$ & $(P \wedge Q) \Rightarrow R$ & $(P \Rightarrow R) \wedge (Q \Rightarrow R)$\\\hline
+                    $T$ $T$ $T$ & $T$ & $T$\\
+                    $T$ $T$ $F$ & $F$ & $F$\\
+                    $T$ $F$ $T$ & $T$ & $T$\\
+                    $T$ $F$ $F$ & $T$ & $F$\\
+                    $F$ $T$ $T$ & $T$ & $T$\\
+                    $F$ $T$ $F$ & $T$ & $F$\\
+                    $F$ $F$ $T$ & $T$ & $T$\\
+                    $F$ $F$ $F$ & $T$ & $T$\\
+                \end{tabular}
+
+                So from this truth table, we can conclude that these two expressions are not logically equivalent.
+            \end{proof}
+            \item 
+            This two expressions are logically equivalent.
+            \begin{proof}
+                \begin{tabular}{c|c|c} $P$ $Q$ $R$ & $P \Rightarrow (Q \wedge R)$ & $(P \Rightarrow Q) \vee (P \Rightarrow R)$\\\hline
+                    $T$ $T$ $T$ & $T$ & $T$\\
+                    $T$ $T$ $F$ & $T$ & $T$\\
+                    $T$ $F$ $T$ & $T$ & $T$\\
+                    $T$ $F$ $F$ & $F$ & $F$\\
+                    $F$ $T$ $T$ & $T$ & $T$\\
+                    $F$ $T$ $F$ & $T$ & $T$\\
+                    $F$ $F$ $T$ & $T$ & $T$\\
+                    $F$ $F$ $F$ & $T$ & $T$\\
+                \end{tabular}
+
+                So from this truth table, we can conclude that these two expressions are logically equivalent.
+            \end{proof}
+            \item 
+            This two expressions are logically equivalent.
+            \begin{proof}
+                \begin{tabular}{c|c|c} $P$ $Q$ $R$ & $P \Rightarrow (Q \wedge R)$ & $(P \Rightarrow Q) \wedge (P \Rightarrow R)$\\\hline
+                    $T$ $T$ $T$ & $T$ & $T$\\
+                    $T$ $T$ $F$ & $F$ & $F$\\
+                    $T$ $F$ $T$ & $F$ & $F$\\
+                    $T$ $F$ $F$ & $F$ & $F$\\
+                    $F$ $T$ $T$ & $T$ & $T$\\
+                    $F$ $T$ $F$ & $T$ & $T$\\
+                    $F$ $F$ $T$ & $T$ & $T$\\
+                    $F$ $F$ $F$ & $T$ & $T$\\
+                \end{tabular}
+
+                So from this truth table, we can conclude that these two expressions are logically equivalent.
+            \end{proof}
+        \end{enumerate}
+
+        \item 
+        \begin{enumerate}
+            \item 
+            This statement is a tautology.
+            \begin{proof}
+                \begin{tabular}{c|c} $P$ & $P \Leftrightarrow \neg(\neg P)$\\\hline
+                    $T$ & $T$\\
+                    $F$ & $T$\\
+                \end{tabular}
+
+                So from this truth table, we can conclude that this statement is a tautology.
+            \end{proof}
+            \item 
+            This statement is a contradiction.
+            \begin{proof}
+                \begin{tabular}{c|c} $P$ & $P \wedge \neg P$\\\hline
+                    $T$ & $F$\\
+                    $F$ & $F$\\
+                \end{tabular}
+
+                So from this truth table, we can conclude that this statement is a contradiction..
+            \end{proof}
+            \item 
+            This statement is a tautology.
+            \begin{proof}
+                \begin{tabular}{c|c} $P$ & $P \vee \neg P$\\\hline
+                    $T$ & $T$\\
+                    $F$ & $T$\\
+
+                \end{tabular}
+
+                So from this truth table, we can conclude that This statement is a tautology.                .
+            \end{proof}
+            \item 
+            This statement is neither tautology or contradiction.
+            \begin{proof}
+                \begin{tabular}{c|c} $P$ $Q$ & $(P \wedge Q) \vee (\neg P \wedge \neg Q)$\\\hline
+                    $T$ $T$ & $T$\\
+                    $T$ $F$ & $F$\\
+                    $F$ $T$ & $F$\\
+                    $F$ $F$ & $F$\\
+                \end{tabular}
+
+                So from this truth table, we can conclude that this statement is neither tautology or contradiction.
+            \end{proof}
+            \item 
+            This statement is a tautology.
+            \begin{proof}
+                \begin{tabular}{c|c} $P$ $Q$ $R$ & $P \Rightarrow (Q \Rightarrow P)$\\\hline
+                    $T$ $T$ & $T$\\
+                    $T$ $T$ & $T$\\
+                    $T$ $T$ & $T$\\
+                    $T$ $T$ & $T$\
+                \end{tabular}
+
+                So from this truth table, we can conclude that this statement is a tautology.
+            \end{proof}
+        \end{enumerate}
+    \end{enumerate}
+\end{document}
